@@ -1,0 +1,12 @@
+.small-flag {
+    width: 50px;
+}
+
+.mr-1 {
+    margin-right: 5px;
+}
+
+h1 {
+    position: relative;
+    bottom: 50px;
+}

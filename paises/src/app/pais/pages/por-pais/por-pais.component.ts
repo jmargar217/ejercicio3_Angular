@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PaisOrdenado, SearchPaisInterface } from '../../interfaces/interfacePais.interface';
+import { PeticionPaisService } from '../../services/peticion-pais.service';
 
 @Component({
   selector: 'app-por-pais',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PorPaisComponent implements OnInit {
 
-  constructor() { }
+  constructor(private servicioPais:PeticionPaisService) { }
 
   ngOnInit(): void {
+  }
+
+  obtenerNombrePais():PaisOrdenado[]{
+    return this.servicioPais.paises;
   }
 
 }

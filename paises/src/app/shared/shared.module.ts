@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SidebarComponent } from './sidebar/sidebar.component';
-
-
+import { AppRoutingModule } from '../app-routing.module';
+import { PeticionPaisService } from '../pais/services/peticion-pais.service';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,11 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AppRoutingModule,
+  ],
+  providers: [
+    PeticionPaisService
   ]
 })
 export class SharedModule { }
